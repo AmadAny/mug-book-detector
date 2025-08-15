@@ -2,14 +2,6 @@
 FROM python:3.9-slim
 
 # --- Install system dependencies required by opencv-python-headless ---
-# These are common libraries needed for OpenCV to function correctly,
-# even in 'headless' mode within a container.
-# libglib2.0-0: GLib library
-# libsm6: X11 Session Management library
-# libxext6: X11 extension library
-# libxrender-dev: X11 Rendering Extension library
-# libgomp1: GCC OpenMP library (often a dependency)
-# libffi-dev: Foreign Function Interface library (sometimes needed)
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # Set the working directory in the container

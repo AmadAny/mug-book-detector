@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% if error %}
+        <h1>Error</h1>
+        <p style="color: red;">{{ error }}</p>
+        <a href="/">Go Back</a>
+    {% else %}
+        <h1>Input Image</h1>
+        <img src="{{ input_image_url }}" alt="Input Image" style="max-width: 90%; height: auto;">
+
+        <h1>Detection Result</h1>
+        <img src="{{ output_image_url }}" alt="Output Image" style="max-width: 90%; height: auto;">
+
+        <br><br>
+        <a href="/">Detect Another Image</a>
+    {% endif %}
+</body>
+</html>

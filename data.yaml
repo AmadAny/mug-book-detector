@@ -1,0 +1,13 @@
+names:
+- book
+- mug
+nc: 2
+roboflow:
+  license: CC BY 4.0
+  project: module-5-part-1-challenge
+  url: https://universe.roboflow.com/ahmadworkspace/module-5-part-1-challenge/dataset/4
+  version: 4
+  workspace: ahmadworkspace
+test: ../test/images
+train: ../train/images
+val: ../valid/images
